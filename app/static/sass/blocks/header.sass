@@ -1,0 +1,62 @@
+.header
+    background-color: $dark
+    padding: 14px 0
+    position: relative
+    &__content
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        color: $light
+    &__burger
+        display: none
+        background-color: transparent
+        position: absolute
+        border: none
+        padding: 0
+        +md-block
+            display: block
+        &:focus
+            outline: none
+    &__company
+        +col
+        +xxx-block
+            flex-basis: 100%
+            text-align: center
+        +md-block
+            flex-basis: initial
+            flex-grow: 1
+            margin: 0
+        strong, img
+            vertical-align: middle
+        strong
+            margin-left: 45px
+            +sm-block
+                +col
+            +xs-block
+                display: none
+    &__menu
+        +xxx-block
+            margin: 15px auto
+        +md-block
+            transform: scaleY(0)
+            transition: transform .3s
+            transform-origin: top
+            padding: 30px 0
+            position: absolute
+            text-align: center
+            left: 0
+            top: calc(100% - 2px)
+            margin: 0
+            flex-direction: column
+            width: 100%
+            background-color: $dark
+        display: flex
+        list-style: none
+        li:not(:last-child)
+            margin-right: 80px
+            +md-block
+                margin: 0 0 10px
+        a
+            color: $light
+            text-decoration: none
