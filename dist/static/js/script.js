@@ -4586,6 +4586,13 @@ if (header) {
   burger.addEventListener('click', function () {
     menu.classList.toggle('active');
   });
+  document.addEventListener('click', function (e) {
+    var target = e.target;
+
+    if (!header.contains(target)) {
+      menu.classList.remove('active');
+    }
+  });
   window.addEventListener('resize', function () {
     if (window.innerWidth < 920 && menu.classList.contains('active')) {
       menu.classList.remove('active');

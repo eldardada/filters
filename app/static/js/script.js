@@ -10,7 +10,12 @@ if(header) {
 	burger.addEventListener('click', () => {
 		menu.classList.toggle('active');
 	});
-
+	document.addEventListener('click', e => {
+		const target = e.target;
+		if(!header.contains(target)) {
+			menu.classList.remove('active');
+		}
+	});
 	window.addEventListener('resize', () => {
 		if(window.innerWidth < 920
 			&& menu.classList.contains('active')) {

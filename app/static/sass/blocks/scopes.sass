@@ -1,0 +1,39 @@
+.scopes
+    background-color: $blue
+    &__image
+        background: url('./static/img/scopes/scope-img.jpg') center no-repeat
+        background-size: cover
+        height: 764px
+    &__info
+        padding: 90px 0
+        h2
+            color: $lightbg
+            margin-bottom: 60px
+            +font(40, 24)
+            +bold
+            text-transform: uppercase
+            +oswald
+    &__blocks
+        +row-flex
+        justify-content: space-around
+        > div
+            display: flex
+            flex-direction: column
+            align-items: center
+    &__block
+        +col
+        display: flex
+        justify-content: center
+        width: 175px
+        height: 175px
+        border-radius: 100%  
+        background-color: $light      
+        box-shadow: 0 0 0 15px #DEECED, 0 0 0 30px #BBD5D9
+        margin-bottom: 58px
+    p
+        text-align: center
+        max-width: 217px
+        +font(24, 16)
+        color: $light
+
+    

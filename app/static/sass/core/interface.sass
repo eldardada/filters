@@ -5,8 +5,30 @@
 
 body
     +font(24, 16)
+    font-family: 'Akzentica 4F'
+    +xxx-block
+        +font(20, 16)
 
 .active
     transform: scale(1) !important
 
+.btn_dark
+    padding: 25px 50px
+    +btn($btnDarkColors)
+    color: $light
+    text-transform: uppercase
+    border: 1px solid transparent
+    &:hover
+        transition: color .3s, background-color .3s, border .3s
+        color: $dark
+        border: 1px solid $dark
+.btn_light
+    padding: 25px 50px
+    text-transform: uppercase
+    background-color: transparent
+    &:hover
+        transition: color .3s, background-color .3s, border .3s
+        color: $light
+        background-color: $black
+    
 

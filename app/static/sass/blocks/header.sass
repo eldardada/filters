@@ -30,19 +30,26 @@
         strong, img
             vertical-align: middle
         strong
+            +bold
+            +oswald
             margin-left: 45px
             +sm-block
                 +col
             +xs-block
                 display: none
     &__menu
+        display: flex
+        list-style: none
+        justify-content: space-between
+        margin-left: 50px
+        flex-grow: 1
         +xxx-block
+            justify-content: space-around
             margin: 15px auto
         +md-block
             transform: scaleY(0)
             transition: transform .3s
             transform-origin: top
-            padding: 30px 0
             position: absolute
             text-align: center
             left: 0
@@ -51,12 +58,20 @@
             flex-direction: column
             width: 100%
             background-color: $dark
-        display: flex
-        list-style: none
-        li:not(:last-child)
-            margin-right: 80px
+        li
+            &:hover::after
+                width: 100%
+            &::after
+                content: ''
+                display: block
+                width: 0
+                height: 1px
+                background-color: $light
+                transition: width .3s
+                +md-block
+                    display: none
             +md-block
-                margin: 0 0 10px
+                margin-bottom: 10px
         a
             color: $light
             text-decoration: none

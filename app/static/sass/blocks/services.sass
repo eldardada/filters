@@ -1,0 +1,33 @@
+.services
+    background-color: $lightbg2
+    &__content
+        padding: 200px 0
+        h2
+            +bold
+            text-transform: uppercase
+            +oswald
+            +font(39, 16)
+            margin-bottom: 60px
+    &__blocks
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        +md-block
+            grid-template-columns: 1fr 1fr
+        +xxs-block
+            grid-template-columns: 1fr
+    &__block
+        min-height: 250px
+        box-sizing: border-box
+        padding: 35px
+        background-color: $light
+        border: 1px solid $gray
+        box-shadow: -2px 5px 40px rgba(53, 59, 62, 0.1)
+        img
+            display: block
+            margin-bottom: 12px
+        h3
+            +bold
+            +font(28, 18)
+        p
+            +font(18, 16)   
+        

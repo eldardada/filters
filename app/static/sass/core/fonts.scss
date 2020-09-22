@@ -1,21 +1,41 @@
 @font-face {
-    font-family: 'Brutal Type';
+    font-family: 'Akzentica4F';
     font-style: normal;
     font-weight: 400;
-    src: url('./static/fonts/BrutalType.woff2') format('woff2'), 
-         url('./static/fonts/BrutalType.woff') format('woff');
+    src: url('./static/fonts/Akzentica4F.woff2') format('woff2'), 
+         url('./static/fonts/Akzentica4F.woff') format('woff');
   }
 
 @font-face {
-    font-family: 'Brutal Type';
+    font-family: 'Akzentica4F';
     font-style: normal;
     font-weight: 700;
-    src: url('./static/fonts/BrutalType-Bold.woff2') format('woff2'), 
-         url('./static/fonts/BrutalType-Bold.woff') format('woff');
+    src: url('./static/fonts/Akzentica4F-Bold.woff2') format('woff2'), 
+         url('./static/fonts/Akzentica4F-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/fonts/Oswald-Regular.woff2') format('woff2'), 
+         url('./static/fonts/Oswald-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./static/fonts/Oswald-Bold.woff2') format('woff2'), 
+         url('./static/fonts/Oswald-Bold.woff') format('woff');
 }
 
 @mixin brutalType {
     font-family: 'Brutal Type';
+}
+
+@mixin oswald {
+    font-family: 'Oswald';
 }
 
 @mixin bold {

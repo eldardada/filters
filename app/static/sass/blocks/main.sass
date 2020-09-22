@@ -1,0 +1,46 @@
+.main
+    background-color: $lightbg
+    &-top
+        padding-top: 76px
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: 700px
+        align-items: center
+        margin-bottom: 85px
+    &__text
+        grid-column: 1/9
+        grid-row: 1/1
+        z-index: 2
+    &__title
+        +oswald
+        text-transform: uppercase
+        +bold
+        +font(56,30)
+        margin-bottom: 20px
+    &__subtitle
+        margin-bottom: 70px
+        max-width: 715px
+    &__img
+        grid-column: 7/13
+        grid-row: 1/1
+        img
+            width: 100%
+    &__materials
+        +row-flex
+        justify-content: space-between
+        margin-bottom: 90px
+    &__material
+        +col
+        +size(2)
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 25px
+        text-align: center
+        border: 1px solid #000
+        +font(22, 16)
+        transition: background-color .3s
+        &:hover
+            background-color: #BBD5D9
+            box-shadow: 0px 4px 50px rgba(53, 59, 62, 0.08)
+        
