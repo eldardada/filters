@@ -38,6 +38,7 @@ global.config = {
         js: `${appDirstatic}js/**/*.js`,
         sass: `${appDirstatic}sass/**/*.+(sass|scss)`,
         img: `${appDirstatic}img/**/*`,
+        svg: `${appDirstatic}img/svg/*.svg`,
         fonts: `${appDirstatic}fonts/**/*`
     }
 };

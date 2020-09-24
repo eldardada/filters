@@ -1,0 +1,65 @@
+.about
+    padding-bottom: 320px
+    h2
+        +bold
+        +oswald
+        text-transform: uppercase
+        margin-bottom: 60px
+        +font(39, 24)
+    &__content
+        position: relative
+        display: flex
+        flex-wrap: wrap
+    &__img
+        flex-basis: 50%
+    &__text
+        max-width: 560px
+        flex-basis: 50%
+        padding: 100px 0
+        padding-left: 100px
+        strong
+            +oswald
+            text-transform: uppercase
+            +font(24, 20)
+            display: block
+            margin-bottom: 60px
+            > span
+                display: block
+        p
+            +font(18, 16)
+            margin-bottom: 30px
+    &__banner
+        position: absolute
+        right: 0
+        bottom: -200px
+        
+        max-width: 55%
+        background-color: $mint
+        padding: 155px 120px 85px
+        > p
+            +bold
+            +font(28, 20)
+            margin-bottom: 45px
+            position: relative
+            &::after, &::before 
+                display: block
+                position: absolute
+                color: $gray
+                font-size: 350px
+                +bold
+            &::after
+                content: '”'
+                top: -30px
+                right: -120px
+            &::before
+                content: '“'
+                top: -200px
+                left: -80px
+        > div
+            display: flex
+        small span
+            display: block
+        &__leftname
+
+        &__rightname
+            margin-left: auto

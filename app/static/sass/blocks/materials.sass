@@ -1,11 +1,100 @@
 .materials
+    padding: 200px 0
     h2
         +oswald
         +bold
         +font(39, 20)
+        text-transform: uppercase
+        margin-bottom: 90px
     &__block
+        background-color: transparent
         display: flex
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
         &__left
+            border: 1px solid $gray
+            background-color: $mint
+            flex-basis: 45%
+            padding: 85px
+            h3
+                +oswald
+                +font(36, 24)
+                margin-bottom: 15px
+            > span
+                +font(24, 16)
+                display: block
+                margin-bottom: 30px
+            > p
+                margin-bottom: 50px
+        &__right
+            border: 1px solid $gray
+            border-left: none
+            flex-basis: 55%
+            padding: 31px 0 50px
+            h3
+                padding: 30px 85px
+                margin-bottom: 50px
+                border-bottom: 1px solid $gray
+                +oswald
+                +font(24, 20)
+                text-transform: uppercase
+            > ul
+                padding: 0 85px
+                li
+                    width: 100%
+                    display: flex
+                    > strong
+                        display: block
+                        flex-basis: 47%
+                        margin-right: 3%
+                    > span
+                        flex-basis: 50%
         &__product
             display: flex
+            margin-bottom: 53px
+            img
+                display: block
+                width: 100%
+                max-width: 285px
+            > div
+                padding: 10px 35px 10px 20px
+                > span
+                    display: block
+                    margin-bottom: 20px
+                > strong
+                    +oswald
+                    +font(36, 18)
+                & > div
+                    margin-bottom: 101px
+                    position: relative
+                    display: flex
+                    width: 100%
+                    max-width: 285px
+                    background-color: $light
+                    +font(18, 16)
+                    padding: 11px 19px 11px 36px
+                    color: rgba(53, 59, 62, 0.5)
+                    p[data-name="mainSelect"]
+                        flex-grow: 1
+                    ul
+                        position: absolute
+                        width: 100%
+                        top: 100%
+                        left: 0
+                        background-color: $light
+                        border-top: 1px solid $gray
+                        transform: scale(0)
+                        transition: transform .3s
+                        transform-origin: top
+                        li
+                            padding: 10px 20px
+                            border-bottom: 1px solid $gray
+        &__buttons
+            +row-flex
+            button
+                +col
+                +size(6)
+
+
 

@@ -22,5 +22,19 @@ if(header) {
 			menu.classList.remove('active');
 		}
 	});
+}
 
+const materials = document.querySelector('.materials');
+
+if(materials) {
+	materials.addEventListener('click', e => {
+		const target = e.target;
+		const span = target.closest('.materials__arrow');
+		if(span) {
+			const div = span.parentElement;
+			const list = div.querySelector('.materials__list');
+			span.style.transform = 'rotate(-180deg)';
+			list.style.transform = 'scale(1)';
+		}
+	});	
 }

@@ -154,31 +154,140 @@
             <div class="container">
                 <h2>Выберите фильтрующие материалы</h2>
                 <div class="materials__blocks">
-                    <div class="material__block">
-                        <div class="material__block__left">
+                    <div class="materials__block">
+                        <div class="materials__block__left">
                             <h3>Катионид КУ-2-8</h3>
                             <span>ГОСТ 20298-74</span>  
                             <p>Неплавкий, негорючий, невзрывоопасный, неядовитый, радиоактивных и озоносодержащих веществ не содержит.</p>
-                            <div class="material__block__product">
+                            <div class="materials__block__product">
                                 <img src="./static/img/materials/product-1.jpg" alt="">
                                 <div>
                                     <span>Фасовка:</span>
-                                    <input type="text" placeholder="Выберите значение">
+                                    <div>
+                                        <p data-name="mainSelect">Выберите значение</p> 
+                                        <span class="materials__arrow">
+                                            <svg id="selectArrow">
+                                                <use xlink:href="static/img/svg/symbol/sprite.svg#selectArrow"></use>
+                                            </svg> 
+                                        </span>
+                                        <ul class="materials__list">
+                                            <li data-name="select">1 значение</li>
+                                            <li data-name="select">2 значение</li>
+                                            <li data-name="select">3 значение</li>
+                                        </ul>
+                                    </div>
                                     <strong>40 000 грн./м3</strong>
                                 </div>
                             </div>
-                            <div class="material__block__buttons">
+                            <div class="materials__block__buttons">
                                 <button class="btn_light">выбрать</button>
                                 <button class="btn_dark">Оставить заявку</button>
                             </div>
+                        </div>
+                        <div class="materials__block__right">
+                            <h3>Показатели качества</h3>
+                            <ul>
+                                <li><strong>Внешний вид:</strong><span>Сферические зерна от светло-желтого до темно-коричневого цвета</span></li>
+                                <li><strong>Ионная форма:</strong><span>хлоридная</span></li>
+                                <li><strong>Гранулометрический состав:</strong><span>
+                                    <ul>
+                                        <li>а) размер зерен, мм 0,315-1,25</li>
+                                        <li>б) объемная доля рабочей фракции, % не менее 98</li>
+                                        <li>в) эффективный размер зерен, мм, не более 0,4-0,6</li>
+                                        <li>г) коэффициент однородности, не более 1,7</li>
+                                    </ul>
+                                    
+                                    </span></li>
+                                <li><strong>Массовая доля влаги, %</strong><span>35-50</span></li>
+                                <li><strong>Удельный объем в ОН-форме, см3/г</strong><span>3,0±0,3</span></li>
+                                <li><strong>Полная статическая обменная емкость, ммоль/см3 (мг-экв/см3)</strong><span>не менее 1,15</span></li>
+                                <li><strong>Динамическая обменная емкость, моль/см3 (г-экв/м3)</strong><span>не менее 700</span></li>
+                                <li><strong>Окисляемость фильтрата в пересчете на кислород</strong><span>не более 0,55 мг/л</span></li>
+                                <li><strong>Осмотическая стабильность</strong><span>98%</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="about">
+            <div class="container">
+                <h2>О компании</h2>
+                <div class="about__content">
+                    <div class="about__img">
+                        <img src="./static/img/about-img.jpg" alt="">
+                    </div>
+                    <div class="about__text">
+                        <strong><span>Наша миссия —</span>помочь клиентам и удовлетворить их потребности.</strong>
+                        <p>Техносервис Промгрупп — организация, с хорошим именем на рынке.</p>
+                        <p>Мы добываем и используем в производстве своей продукции высококачественный уголь антрацит с высоким содержанием углерода и малым количеством золы и примесей.</p>
+                        <p>Опыт работы дал возможность максимально отладить структуру и все базовые бизнес-процессы, задействованные в деятельности организации</p>
+                        <p>Наше оборудование позволяет получать продукцию с пониженной влажностью и однородным фракционным составом.</p>
+                    </div>
+                    <div class="about__banner">
+                        <p>Мы уделяем большое внимание контролю производства, что позволяет гарантировать стабильное качество нашей продукции.</p>
+                        <div>
+                            <small class="about__banner__leftname">
+                                <span>Директор</span>
+                                Нестеренко Сергей Владимирович
+                            </small>
+                            <small class="about__banner__rightname">
+                                <span>
+                                    Техничский директор
+                                </span>
+                                Барон Вячеслав Владимирович
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container">
+                <h2>Наши партнеры</h2>
+            </div>
+            <div class="partners__blocks">
+                <div class="partners__block"><img src="./static/img/partners/partners-1.svg" alt=""></div>
+                <div class="partners__block"><img src="./static/img/partners/partners-2.svg" alt=""></div>
+                <div class="partners__block"><img src="./static/img/partners/partners-3.svg" alt=""></div>
+                <div class="partners__block"><img src="./static/img/partners/partners-4.svg" alt=""></div>
+                <div class="partners__block"><img src="./static/img/partners/partners-5.svg" alt=""></div>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="container">
+                <h2>Наши контакты</h2>
+            </div>
+            <div class="contacts__content">
+                <div class="contacts__map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae4fef228b99eda0bfa2e61c5b205272cd31d12f899d856303ecd66691abc3789&amp;width=100%25&amp;height=497&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <div class="contacts__text">
+                    <h4>Телефоны</h4>
+                    <ul>
+                        <li><a href="">+38 067 573-2024</a></li>
+                        <li><a href="">+38 066 375-8889</a></li>
+                        <li><a href="">+38 097 092-2331</a></li>
+                    </ul>
+                    <h4>Адрес:</h4>
+                    <p>г. Харьков, ул. Чернышевского 97</p>
+                </div>
+            </div>
+           
+        </section>
     </main>
-    
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <span>ООО "ТЕХНОСЕРВИС ПРОМГРУПП"</span>
+            <img src="./static/img/logo.svg" alt="logo">
+            <a href="">+38 (067) 573-20-24</a>
+        </div>
+    </div>
+</footer>
     <script src="static/js/script.js"></script>
 </body>
 </html>

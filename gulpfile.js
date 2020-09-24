@@ -31,6 +31,13 @@ const isDev = process.argv.includes('--dev');
 const isProd = !isDev;
 // include files
 const fileinclude = require("gulp-file-include");
+// svg sprite
+const svgmin = require("gulp-svgmin");
+const cheerio = require("gulp-cheerio");
+const svgSprite = require("gulp-svg-sprite");
+const replace = require("gulp-replace");
+// html validate
+const htmlValidator = require('gulp-w3c-html-validator');
 
 require('./conf.js')
 
@@ -85,6 +92,7 @@ function html(){
 
             // .pipe(rigger())
             .pipe(fileinclude())
+            .pipe(htmlValidator())
             .pipe(gulp.dest(distDir))
             .pipe(browserSync.stream())
 }
@@ -147,7 +155,6 @@ function watch() {
           // if u want to use sync + ur localhost
           // proxy: config.localhost
         })
-
       gulp.watch(config.watch.html, html)
       gulp.watch(config.watch.php, php)
       gulp.watch(config.watch.sass, styles)
@@ -155,8 +162,33 @@ function watch() {
       gulp.watch(config.watch.img, images)
       gulp.watch(config.watch.js, scripts)
       gulp.watch('./smartgrid.js', grid)
+      gulp.watch(config.watch.svg, svg)
+}
 
-
+function svg() {
+  return gulp.src('app/static/img/svg/*.svg')
+    .pipe(svgmin({
+        js2svg: {
+            pretty: true
+        }
+    }))
+    .pipe(cheerio({
+        run: function($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        },
+        parserOptions: {xmlMode: true}
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+        mode: {
+            symbol: {
+                sprite: "sprite.svg"
+            }
+        }
+    }))
+    .pipe(gulp.dest('dist/static/img/svg/'));
 }
 
 function grid(done){
@@ -165,9 +197,10 @@ function grid(done){
     done()
 };
 
-let build = gulp.series(clean, gulp.parallel(styles, php, html, scripts, images, fonts));
+let build = gulp.series(clean, gulp.parallel(styles, php, html, scripts, images, fonts, svg));
 
 gulp.task('clean', clean);
 gulp.task('build', build);
 gulp.task('grid', grid);
+gulp.task('svg', svg);
 gulp.task('watch', gulp.series(build, watch));

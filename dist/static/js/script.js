@@ -4599,3 +4599,19 @@ if (header) {
     }
   });
 }
+
+var materials = document.querySelector('.materials');
+
+if (materials) {
+  materials.addEventListener('click', function (e) {
+    var target = e.target;
+    var span = target.closest('.materials__arrow');
+
+    if (span) {
+      var div = span.parentElement;
+      var list = div.querySelector('.materials__list');
+      span.style.transform = 'rotate(-180deg)';
+      list.style.transform = 'scale(1)';
+    }
+  });
+}
